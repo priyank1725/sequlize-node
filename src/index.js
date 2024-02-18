@@ -1,7 +1,6 @@
 const app = require('./app')
+const config = require('./config/index')
 
-let server 
-const port = 5000
-server = app.listen(port, ()=>{
-    console.log('server started at 5000')
+app.listen(config.port, ()=>{
+    console.log(`server started at ${config.port}`)
 })
